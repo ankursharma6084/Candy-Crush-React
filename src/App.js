@@ -29,7 +29,7 @@ const App = () => {
   const [squareBeingDraged, setSquareBeingDraged] = useState(null);
   const [squareBeingReplaced, setSquareBeingReplaced] = useState(null);
   const [scoreDisplay, setScoreDisplay] = useState(0);
-
+// eslint-disable-next-line
   const checkForColumnOfFour = () => {
     for (let i = 0; i <= 39; i++) {
       const columnOfFour = [i, i + width, i + width * 2, i + width * 3];
@@ -43,7 +43,7 @@ const App = () => {
       }
     }
   }
-
+// eslint-disable-next-line
   const checkForColumnOfThree = () => {
     for (let i = 0; i <= 47; i++) {
       const columnOfThree = [i, i + width, i + width * 2];
@@ -57,7 +57,7 @@ const App = () => {
       }
     }
   }
-
+// eslint-disable-next-line
   const checkForRowOfFour = () => {
     for (let i = 0; i < 64; i++) {
       if (i % width > 4)
@@ -74,7 +74,7 @@ const App = () => {
       }
     }
   }
-
+// eslint-disable-next-line
   const checkForRowOfThree = () => {
     for (let i = 0; i < 64; i++) {
       if (i % width > 5)
@@ -91,7 +91,7 @@ const App = () => {
       }
     }
   }
-
+// eslint-disable-next-line
   const moveIntoSquareBelow = () => {
     for (let i = 0; i <= 55; i++) {
       if (i < width && currentColorArrangement[i] === blank) {
@@ -186,6 +186,7 @@ const App = () => {
               onDragLeave={(e) => e.preventDefault()}
               onDrop={dragDrop}
               onDragEnd={dragEnd}
+              alt="noimage"
             />
         )}
       </div>

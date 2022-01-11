@@ -7,13 +7,13 @@ import redCandy from './images/red-candy.png'
 import yellowCandy from './images/yellow-candy.png'
 import blank from './images/blank.png'
 // import gameMusicPlay from './music/gameMusic.mp3'
-import dragCandyMusicPlay from './music/dragCandyMusic.mp3'
-import matchCandyMusicPlay from './music/matchCandyMusic.mp3'
+// import dragCandyMusicPlay from './music/dragCandyMusic.mp3'
+// import matchCandyMusicPlay from './music/matchCandyMusic.mp3'
 import './App.css'
 
 // let gameMusic = new Audio(gameMusicPlay);
-let dragCandyMusic = new Audio(dragCandyMusicPlay);
-let matchCandyMusic = new Audio(matchCandyMusicPlay);
+// let dragCandyMusic = new Audio(dragCandyMusicPlay);
+// let matchCandyMusic = new Audio(matchCandyMusicPlay);
 
 const width = 8;
 const candyColors = [
@@ -114,8 +114,8 @@ const App = () => {
   }
 
   const dragStart = (e) => {
-    dragCandyMusic.play();
-    setTimeout(() => dragCandyMusic.pause(), 100);
+    // dragCandyMusic.play();
+    // setTimeout(() => dragCandyMusic.pause(), 100);
     setSquareBeingDraged(e.target);
   }
 
@@ -139,8 +139,8 @@ const App = () => {
 
     if (squareBeingReplacedId && validMove &&
       (checkForColumnOfFour() || checkForRowOfFour() || checkForColumnOfThree() || checkForRowOfThree())) {
-        matchCandyMusic.play();
-        setTimeout(() => matchCandyMusic.pause(), 100);
+        // matchCandyMusic.play();
+        // setTimeout(() => matchCandyMusic.pause(), 100);
       setSquareBeingDraged(null);
       setSquareBeingReplaced(null);
     }
